@@ -28,9 +28,20 @@ INSTALLED_APPS = [
     'search',
     'streams',
     'menus',
+    'flex',
+    'site_settings',
+    'contact',
 
+
+    'wagtail.contrib.modeladmin',
     'wagtail.contrib.forms',
-    'wagtail.contrib.redirects',
+
+
+
+
+
+
+
     'wagtail.embeds',
     'wagtail.sites',
     'wagtail.users',
@@ -50,6 +61,10 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'wagtail.contrib.settings',
+
+    'widget_tweaks',
+    'django_extensions',
 ]
 
 MIDDLEWARE = [
