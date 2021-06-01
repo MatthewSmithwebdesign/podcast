@@ -1,4 +1,4 @@
-from django.core.cache.utils import make_template_fragment_key
+
 from django.db import models
 
 from modelcluster.fields import ParentalKey
@@ -66,7 +66,7 @@ class Menu(ClusterableModel):
     def __str__(self):
         return self.title
 
-    def save(self, **kwargs):
+    '''def save(self, **kwargs):
 
         key = make_template_fragment_key("site_header")
         cache.delete(key)
@@ -74,4 +74,4 @@ class Menu(ClusterableModel):
         key = make_template_fragment_key("site_footer")
         cache.delete(key)
 
-        return super().save(**kwargs)
+        return super().save(**kwargs)'''

@@ -42,7 +42,7 @@
           {{ settings.site_settings.HoursSettings.hours|richtext }}
         </div>
         <div class="px-lg-3 col-lg-3 col-md-6 col-sm-12">
-          {% cache 2592000 footer_social_settings %}
+
             {% if settings.site_settings.SocialMediaSettings.facebook %}
               <a href="{{ settings.site_settings.SocialMediaSettings.facebook }}" class="cc-footer-social-icon">
                 <img src="{% static 'images/facebook.svg' %}" alt="Facebook">
@@ -63,8 +63,8 @@
                 <img src="{% static 'images/youtube.svg' %}" alt="YouTube">
               </a>
             {% endif %}
-          {% endcache %}
-          <div class="cc-footer-copy">&copy; {% now "Y" %} Rocketman</div>
+
+          <div class="cc-footer-copy">&copy; {% now "Y" %} Matthew Smith Web Design</div>
       </div>
     </div>
   </div>

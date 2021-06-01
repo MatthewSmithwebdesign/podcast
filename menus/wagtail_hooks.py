@@ -1,6 +1,6 @@
 from wagtail.contrib.modeladmin.options import ModelAdmin, modeladmin_register
 
-from .models import
+from .models import Menu
 
 @modeladmin_register
 class MenuAdmin(ModelAdmin):
