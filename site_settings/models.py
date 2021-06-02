@@ -6,7 +6,7 @@ from wagtail.core.fields import RichTextField
 
 
 @register_setting
-class HoursSettings(BaseSetting):
+class LiveSettings(BaseSetting):
 
     hours = RichTextField(
         blank=True,
