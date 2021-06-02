@@ -66,12 +66,4 @@ class Menu(ClusterableModel):
     def __str__(self):
         return self.title
 
-    '''def save(self, **kwargs):
 
-        key = make_template_fragment_key("site_header")
-        cache.delete(key)
-
-        key = make_template_fragment_key("site_footer")
-        cache.delete(key)
-
-        return super().save(**kwargs)'''

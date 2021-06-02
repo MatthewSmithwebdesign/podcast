@@ -125,6 +125,18 @@ class CallToActionBlock(blocks.StructBlock):
         icon = "plus"
         label = "Call to Action"
 
-''' embed stream field'''
-'''class YouTubeEmbed(blocks.StructBlock):
-    youtube_id = models.CharField()'''
+    # youtube embed stream field
+class YouTubeEmbedBlock(blocks.StructBlock):
+    youtube_id = blocks.CharBlock(max_length=30,help_text= 'youtube id here',  required=True)
+    class Meta:
+        template = "streams/youtube.html"
+        icon = "media"
+        label = "YouTube"
+
+class SpotifyEmbedBlock(blocks.StructBlock):
+    artist_id = blocks.CharBlock(max_length=30,help_text= ' enter the artist id for spotify', required=True)
+
+    class Meta:
+        template = "streams/spotify.html"
+        icon = "pilcrow"
+        label = "Spotify"
