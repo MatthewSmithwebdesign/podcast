@@ -32,15 +32,11 @@ INSTALLED_APPS = [
     'site_settings',
     'contact',
 
-
+    'wagtail.contrib.redirects',
     'wagtail.contrib.modeladmin',
     'wagtail.contrib.forms',
-
-
-
-
-
-
+    'wagtail.contrib.settings',
+    'wagtail.contrib.sitemaps',
 
     'wagtail.embeds',
     'wagtail.sites',
@@ -61,7 +57,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'wagtail.contrib.settings',
+
 
     'widget_tweaks',
     'django_extensions',

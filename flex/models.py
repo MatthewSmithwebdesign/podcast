@@ -19,6 +19,8 @@ class FlexPage(Page):
             ("cards", blocks.CardsBlock()),
             ("image_and_text", blocks.ImageAndTextBlock()),
             ("cta", blocks.CallToActionBlock()),
+            ("youtube", blocks.YouTubeEmbedBlock()),
+            ("spotify", blocks.SpotifyEmbedBlock()),
 
 
             (
@@ -35,6 +37,8 @@ class FlexPage(Page):
                     template="streams/large_image_block.html",
                 ),
             ),
+
+
         ],
         null=True,
         blank=True,

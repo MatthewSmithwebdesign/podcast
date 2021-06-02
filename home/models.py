@@ -4,6 +4,7 @@ from wagtail.core.models import Page
 from wagtail.core.fields import StreamField
 from wagtail.admin.edit_handlers import FieldPanel, StreamFieldPanel, PageChooserPanel
 from wagtail.images.edit_handlers import ImageChooserPanel
+from wagtail.core import blocks as wagtail_blocks
 
 from streams import blocks
 
@@ -47,6 +48,13 @@ class HomePage(Page):
             ("title", blocks.TitleBlock()),
             ("cards", blocks.CardsBlock()),
             ("image_and_text", blocks.ImageAndTextBlock()),
+            (
+                "richtext",
+                wagtail_blocks.RichTextBlock(
+                    template="streams/simple_richtext_block.html",
+                    features=["bold", "italic", "ol", "ul", "link"],
+                ),
+            ),
 
         ],
         null=True,
