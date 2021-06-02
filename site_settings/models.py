@@ -66,28 +66,5 @@ class SocialMediaSettings(BaseSetting):
 
 
 
-@register_setting
-class FooterCTASettings(BaseSetting):
-
-    title = models.CharField(max_length=100)
-    subtitle = models.CharField(max_length=250)
-    button_text = models.CharField(max_length=25, default='Contact Us')
-    button_internal_page = models.ForeignKey(
-        'wagtailcore.Page',
-        null=True,
-        blank=True,
-        on_delete=models.SET_NULL,
-        related_name='+',
-        help_text='If an internal page is selected, it will be used before the external page.'
-    )
-    button_external_page = models.URLField(blank=True, help_text='If an internal page is selected, it will be used before the external page.')
-
-    panels = [
-        FieldPanel("title"),
-        FieldPanel("subtitle"),
-        FieldPanel("button_text"),
-        PageChooserPanel("button_internal_page"),
-        FieldPanel("button_external_page"),
-    ]
 
 
