@@ -8,9 +8,7 @@ from wagtail.images.blocks import ImageChooserBlock
 from wagtail.snippets.blocks import SnippetChooserBlock
 
 from streams import blocks
-'''https://open.spotify.com/artist/6AOyhzwnRx5qmxHIWWIDaV?si=OYb0WeqnTIOLYkbJ2Sqeqg
-https://open.spotify.com/show/2sRO4CwbOq9DbtskneuEcV?si=ade810e2325f43b4
-'''
+
 class FlexPage(Page):
     parent_page_types = ["home.HomePage", "flex.FlexPage"]
     body = StreamField(
