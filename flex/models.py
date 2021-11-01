@@ -9,8 +9,6 @@ from wagtail.snippets.blocks import SnippetChooserBlock
 
 from streams import blocks
 
-
-
 class FlexPage(Page):
     parent_page_types = ["home.HomePage", "flex.FlexPage"]
     body = StreamField(
@@ -21,6 +19,7 @@ class FlexPage(Page):
             ("cta", blocks.CallToActionBlock()),
             ("youtube", blocks.YouTubeEmbedBlock()),
             ("spotify", blocks.SpotifyEmbedBlock()),
+            ("podcast", blocks.PodcastEmbedBlock()),
 
 
             (

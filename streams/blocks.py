@@ -140,3 +140,12 @@ class SpotifyEmbedBlock(blocks.StructBlock):
         template = "streams/spotify.html"
         icon = "pilcrow"
         label = "Spotify"
+
+
+class PodcastEmbedBlock(blocks.StructBlock):
+    artist_id = blocks.CharBlock(max_length=30,help_text= ' enter the artist id for spotify', required=True)
+
+    class Meta:
+        template = "streams/spotify_pod.html"
+        icon = "pilcrow"
+        label = "Podcast"
